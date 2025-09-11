@@ -225,6 +225,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .w-19 {
+    width: calc(var(--spacing) * 19);
+  }
   .w-19\/20 {
     width: calc(19/20 * 100%);
   }
