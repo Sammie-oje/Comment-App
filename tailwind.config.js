@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        myfont: ["rubik"],
+        myfont: ["Rubik"],
       },
     },
   },
