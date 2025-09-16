@@ -20,7 +20,7 @@ export function template({
 
   const article = `
     <article id="comment-${id}" class="bg-white relative rounded-lg ${
-    isReply ? "w-19/20 mt-2" : "w-full mb-2 mt-2"
+    isReply ? "w-19/20 mt-2" : "w-full mb-4 mt-2"
   } p-4 grid grid-cols-2 md:grid-cols-[auto_1fr_auto] gap-6 items-start"
       >
       <div class="col-start-1 row-start-2 w-fit px-2.5 py-1.5 bg-grey-50 rounded-lg flex flex-row gap-3 items-center md:row-start-1 md:col-start-1 md:flex-col md:py-3.5 md:px-2.5">
