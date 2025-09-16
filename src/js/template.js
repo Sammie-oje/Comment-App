@@ -23,7 +23,7 @@ export function template({
     isReply ? "w-19/20 mt-2" : "w-full mb-2 mt-2"
   } p-3 grid grid-cols-2 md:grid-cols-[auto_1fr_auto] gap-6 items-start"
       >
-      <div class="col-start-1 row-start-2 w-fit p-2 bg-grey-50 rounded-md flex flex-row gap-3 items-center md:row-start-1 md:col-start-1 md:flex-col">
+      <div class="col-start-1 row-start-2 w-fit p-2 bg-grey-50 rounded-md flex flex-row gap-4 items-center md:row-start-1 md:col-start-1 md:flex-col">
         <button class="cursor-pointer" onclick="increaseCount(${id})">
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
             <path 
