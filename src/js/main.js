@@ -1,15 +1,12 @@
 import { data } from "./data.js";
 import { addComment } from "./user-input.js";
-import { commentForm } from "./form-template.js";
-
+import { addReply } from "./user-input.js";
 import { template } from "./template.js";
-
-window.commentForm = commentForm;
 
 let comments = [...data.comments];
 
 //Populate comments
-const populateComments = (data) => {
+const populateUI = (data) => {
   const commentsEl = document.querySelector("#comments");
 
   commentsEl.innerHTML = "";
@@ -83,18 +80,41 @@ const replyTemplate = ({
   });
 };
 
-window.addEventListener("DOMContentLoaded", populateComments(comments));
+window.addEventListener("DOMContentLoaded", populateUI(comments));
 
 //Show users comment/reply in the UI
-const submitBtn = document.querySelector("form button");
+const form = document.querySelector("form");
 
-submitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+form.addEventListener("submit", (e) => {
   const userInput = document.querySelector("form textarea");
+  if (userInput.value.trim()) {
+    e.preventDefault();
 
-  const userComment = addComment(userInput.value);
-  comments.push(userComment);
+    const userComment = addComment(userInput.value);
+    comments.push(userComment);
 
-  populateComments(comments);
+    populateUI(comments);
+  } else {
+    alert("Please type in a valid text");
+  }
   userInput.value = "";
 });
+
+export const renderReply = (targetId, replyingTo) => {
+  const targetEl = document.getElementById(targetId);
+  const replyForm = targetEl.nextElementSibling.querySelector("form");
+
+  const input = replyForm.querySelector("textarea");
+
+  replyForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const userReply = addReply(replyingTo, input.value);
+
+    const comment = comments.find((c) => c.user.username === replyingTo);
+    if (comment) {
+      comment.replies.push(userReply);
+    }
+    populateUI(comments);
+  });
+};
