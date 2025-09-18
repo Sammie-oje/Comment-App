@@ -48,7 +48,7 @@ export function template({
       <div class="col-span-2 md:col-span-1 md:col-start-2">
         <span class="flex gap-2 items-center">
           <img
-            src="${image.webp}"
+            src="${image.png}"
             alt="avatar"
             class="size-6"
           />
