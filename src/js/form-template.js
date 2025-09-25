@@ -11,9 +11,11 @@ export function reply(targetId, isReply, replyingTo) {
         } grid grid-cols-2 md:grid-cols-[auto_1fr_auto] gap-4 items-start"
       >
         <img
-          src="/public/avatars/juliusomo.png"
+          src="/images/avatars/juliusomo.png"
           alt="user-avatar"
           class="size-8 col-start-1 row-start-2 md:row-start-1 md:col-start-1"
+          width="32"
+          height="32"
         />
 
         <form action="#" class="contents">

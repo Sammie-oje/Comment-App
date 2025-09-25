@@ -83,10 +83,10 @@ const replyTemplate = ({
 window.addEventListener("DOMContentLoaded", populateUI(comments));
 
 //Show users comment/reply in the UI
-const form = document.querySelector("form");
+const form = document.querySelector("#comment-form");
 
 form.addEventListener("submit", (e) => {
-  const userInput = document.querySelector("form textarea");
+  const userInput = document.querySelector("#comment-form textarea");
   if (userInput.value.trim()) {
     e.preventDefault();
 

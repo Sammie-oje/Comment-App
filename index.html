@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/output.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A commenting app template" />
     <title>Comments App</title>
   </head>
   <body class="bg-grey-50 min-h-screen flex justify-center items-center">
-    <main class="w-95 flex flex-col items-center m-4 md:w-2xl">
-      <section id="comments">
+    <main class="w-95 min-h-screen flex flex-col items-center m-4 md:w-2xl">
+      <section id="comments" class="">
         <!-- Fill with json data -->
       </section>
       <!-- Add your comment/reply -->
@@ -18,12 +19,14 @@
         class="bg-white rounded-md w-full p-3 mt-2 grid grid-cols-2 md:grid-cols-[auto_1fr_auto] gap-4 items-start"
       >
         <img
-          src="/public/avatars/juliusomo.png"
+          src="/images/avatars/juliusomo.png"
           alt="user-avatar"
           class="size-8 col-start-1 row-start-2 md:row-start-1 md:col-start-1"
+          width="32"
+          height="32"
         />
 
-        <form action="#" class="contents">
+        <form action="#" class="contents" id="comment-form">
           <textarea
             placeholder="Add a comment..."
             aria-label="user-comment"

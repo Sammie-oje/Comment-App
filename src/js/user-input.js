@@ -6,8 +6,8 @@ export const addComment = (input) => {
     score: 0,
     user: {
       image: {
-        png: "/public/avatars/juliusomo.png",
-        webp: "/public/avatars/juliusomo.webp",
+        png: "/images/avatars/juliusomo.png",
+        webp: "/images/avatars/juliusomo.webp",
       },
       username: "juliusomo",
     },
@@ -24,8 +24,8 @@ export const addReply = (replyingTo, input) => {
     replyingTo: `${replyingTo}`,
     user: {
       image: {
-        png: "/public/avatars/juliusomo.png",
-        webp: "/public/avatars/juliusomo.webp",
+        png: "/images/avatars/juliusomo.png",
+        webp: "/images/avatars/juliusomo.webp",
       },
       username: "juliusomo",
     },

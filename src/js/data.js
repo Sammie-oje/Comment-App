@@ -1,8 +1,8 @@
 export const data = {
   currentUser: {
     image: {
-      png: "/public/avatars/juliusomo.png",
-      webp: "/public/avatars/juliusomo.webp",
+      png: "/images/avatars/juliusomo.png",
+      webp: "/images/avatars/juliusomo.webp",
     },
     username: "juliusomo",
   },
@@ -15,8 +15,8 @@ export const data = {
       score: 12,
       user: {
         image: {
-          png: "/public/avatars/amyrobson.png",
-          webp: "/public/avatars/amyrobson.webp",
+          png: "/images/avatars/amyrobson.png",
+          webp: "/images/avatars/amyrobson.webp",
         },
         username: "amyrobson",
       },
@@ -30,8 +30,8 @@ export const data = {
       score: 5,
       user: {
         image: {
-          png: "/public/avatars/maxblagun.png",
-          webp: "/public/avatars/maxblagun.webp",
+          png: "/images/avatars/maxblagun.png",
+          webp: "/images/avatars/maxblagun.webp",
         },
         username: "maxblagun",
       },
@@ -45,8 +45,8 @@ export const data = {
           replyingTo: "maxblagun",
           user: {
             image: {
-              png: "/public/avatars/ramsesmiron.png",
-              webp: "/public/avatars/ramsesmiron.webp",
+              png: "/images/avatars/ramsesmiron.png",
+              webp: "/images/avatars/ramsesmiron.webp",
             },
             username: "ramsesmiron",
           },
@@ -60,8 +60,8 @@ export const data = {
           replyingTo: "ramsesmiron",
           user: {
             image: {
-              png: "/public/avatars/juliusomo.png",
-              webp: "/public/avatars/juliusomo.webp",
+              png: "/images/avatars/juliusomo.png",
+              webp: "/images/avatars/juliusomo.webp",
             },
             username: "juliusomo",
           },
