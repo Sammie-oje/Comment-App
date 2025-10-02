@@ -3,7 +3,7 @@ import { addComment } from "./user-input.js";
 import { addReply } from "./user-input.js";
 import { template } from "./template.js";
 
-let comments = [...data.comments];
+export const comments = data.comments;
 
 //Populate comments
 const populateUI = (data) => {
