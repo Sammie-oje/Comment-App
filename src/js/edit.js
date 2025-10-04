@@ -2,10 +2,11 @@ import { comments } from "./main.js";
 
 export const editInput = (id, editBtn) => {
   const el = document.getElementById(id);
+  const commentContent = document.getElementById(`comment-content-${id}`);
   const para = el.querySelector("p");
 
-  para.contentEditable = true;
-  para.focus();
+  commentContent.contentEditable = true;
+  commentContent.focus();
 
   const updateBtn = `
     <button
@@ -23,17 +24,17 @@ export const editInput = (id, editBtn) => {
 
   const btn = document.getElementById(`update-btn-${id}`);
   btn.addEventListener("click", () => {
-    updateInput(para.textContent, id, para, editBtn);
+    updateInput(commentContent.textContent, id, commentContent, editBtn);
   });
 };
 
-const updateInput = (content, id, editPara, editBtn) => {
+const updateInput = (content, id, editSpan, editBtn) => {
   const editedData = findRecursive(comments, id);
   //Update the Dataement content in the data structure / DOM
   if (editedData) {
     editedData.content = content;
-    editPara.textContent = content;
-    editPara.contentEditable = false;
+    editSpan.textContent = content;
+    editSpan.contentEditable = false;
   }
 
   const btn = document.getElementById(`update-btn-${id}`);

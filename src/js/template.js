@@ -71,7 +71,7 @@ export function template({
             isReply
               ? `<strong class="text-purple-600">@${replyingTo}</strong>`
               : ""
-          } ${content}
+          } <span id="comment-content-${id}" class="inline-block">${content}</span>
         </p>
       </div>
 
