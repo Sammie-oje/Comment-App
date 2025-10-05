@@ -22,6 +22,7 @@ export function template({
   const isReply = Boolean(replyingTo);
   const isCurrentUser = username === data.currentUser.username;
 
+
   const article = `
     <article id="${id}" class="bg-white relative rounded-lg ${
     isReply ? "w-19/20 mt-2" : "w-full mb-4 mt-2"

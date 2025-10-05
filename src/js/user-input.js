@@ -1,8 +1,13 @@
+import { timeAgo } from "./timestamp.js";
+
 export const addComment = (input) => {
+  const timestamp = Date.now();
   return {
-    id: Date.now(),
+    id: timestamp,
     content: `${input}`,
-    createdAt: "Just now",
+    get createdAt() {
+      return timeAgo(timestamp);
+    },
     score: 0,
     user: {
       image: {
@@ -16,10 +21,14 @@ export const addComment = (input) => {
 };
 
 export const addReply = (replyingTo, input) => {
+  const timestamp = Date.now();
+
   return {
-    id: Date.now(),
+    id: timestamp,
     content: `${input}`,
-    createdAt: "Just now",
+    get createdAt() {
+      return timeAgo(timestamp);
+    },
     score: 0,
     replyingTo: `${replyingTo}`,
     user: {

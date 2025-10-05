@@ -6,7 +6,7 @@ import { template } from "./template.js";
 export const comments = data.comments;
 
 //Populate comments
-const populateUI = (data) => {
+export const populateUI = (data) => {
   const commentsEl = document.querySelector("#comments");
 
   commentsEl.innerHTML = "";
@@ -118,3 +118,5 @@ export const renderReply = (targetId, replyingTo) => {
     populateUI(comments);
   });
 };
+
+
